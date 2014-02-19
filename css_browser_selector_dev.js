@@ -1,5 +1,5 @@
 /*
-CSS Browser Selector 0.6.1
+CSS Browser Selector 0.6.2
 Originally written by Rafael Lima (http://rafael.adm.br)
 http://rafael.adm.br/css_browser_selector
 License: http://creativecommons.org/licenses/by/2.5/
@@ -107,7 +107,7 @@ function css_browser_selector(u)
 			:is('playbook')?'playbook'
 			:is('mac')?'mac'+ (/mac os x ((\d+)[.|_](\d+))/.test(ua) ?    ( ' mac' + (RegExp.$2)  +  ' mac' + (RegExp.$1).replace('.',"_")  )     : '' )
 			:is('win')?'win'+
-					(is('windows nt 6.2')?' win8'
+					(is('windows nt 6.2') || is('windows nt 6.3')?' win8'
 					:is('windows nt 6.1')?' win7'
 					:is('windows nt 6.0')?' vista'
 					:is('windows nt 5.2') || is('windows nt 5.1') ? ' win_xp' 
